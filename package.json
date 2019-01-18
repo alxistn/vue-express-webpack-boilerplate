@@ -1,0 +1,33 @@
+{
+  "name": "vue-express-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node index.js",
+    "dev": "npm run dev-server & npm run dev-app",
+    "dev-server": "nodemon index.js",
+    "dev-app": "webpack --watch --mode development --progress --open",
+    "build": "webpack --mode production --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexis Santini",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "vue": "^2.5.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-loader": "^8.0.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.9",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
