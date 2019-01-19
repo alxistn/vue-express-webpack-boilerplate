@@ -1,8 +1,18 @@
-const express 	= require('express');
-const path		  = require('path');
-const config    = require('./server/config');
+const express 	  = require('express');
+const path		    = require('path');
+const MongoClient = require('mongodb').MongoClient;
+const assert      = require('assert');
+const config      = require('./server/config');
 
 const app = express();
+
+// Use connect method to connect to the server
+MongoClient.connect(config.MONGODB_URI, function(err, db) {
+  if (err) {
+    console.error(err);
+  }
+  console.log("Connected successfully to server");
+});
 
 //////////////////////////////////////////////////////////////////////////////////
 // APP SETUP
